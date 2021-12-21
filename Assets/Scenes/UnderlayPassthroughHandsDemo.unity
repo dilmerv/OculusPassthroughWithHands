@@ -121,7 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &108574753
+--- !u!1001 &21891105
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -131,22 +131,259 @@ PrefabInstance:
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.015599998
+      value: -0.2376
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.025000013
+      value: 0.0551
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.19290002
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &75191241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1183
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0069999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &120801978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0598
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &131809781
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
@@ -232,7 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ovrHand: {fileID: 223974233}
   HandType: 1
---- !u!1001 &383219142
+--- !u!1001 &331544741
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -242,22 +479,22 @@ PrefabInstance:
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.079
+      value: -0.1778
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08999998
+      value: 0.0069999993
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16900001
+      value: 0.19489999
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
@@ -311,7 +548,244 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &390622902
+--- !u!1001 &490065274
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0598
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0069999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &517791714
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1778
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &553119135
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0578
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &554904550
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -326,175 +800,17 @@ PrefabInstance:
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0419
+      value: 0.0578
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.047300003
+      value: 0.0069999993
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1175
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &522284251
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.079
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.025000013
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.235
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &554679160
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0524
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.08999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.16900001
+      value: 0.19489999
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
@@ -697,85 +1013,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &656609446
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.1075
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.02929999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.16900001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +1105,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &799276753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17809999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
 --- !u!114 &1085141553 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9171321034812437166, guid: 8f1351d1461d3844fac2b1678110ddd8,
@@ -957,164 +1273,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
---- !u!1001 &1250448224
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0704
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.007
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.1175
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &1365220039
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0895
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0069999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.1175
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
 --- !u!1 &1577749883 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1870938896605422, guid: 835e735ca71bf78459fb2cababd74112,
@@ -1147,402 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ovrHand: {fileID: 1577749889}
   HandType: 0
---- !u!1001 &1581812875
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0371
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.02929999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.24640001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &1688353232
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0419
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.047300003
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.1835
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &1793048261
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0895
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06769999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.1175
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &1802470170
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0215
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.047300003
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.1414
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &1824249040
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.079
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.025000013
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.16900001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
---- !u!1001 &2079736465
+--- !u!1001 &1646354617
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1557,17 +1320,491 @@ PrefabInstance:
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0524
+      value: 0.23589998
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02929999
+      value: 0.0069999993
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16900001
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &1713459761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.11829999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &1881290040
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2376
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0069999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &1885320160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17809999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0069999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &1962861522
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.120000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &1964483298
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.120000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0069999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_Name
+      value: OculusLogo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
+--- !u!1001 &2079633893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.23589998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0551
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19489999
       objectReference: {fileID: 0}
     - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
         type: 3}
@@ -1776,85 +2013,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2086050757}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2089529354
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0419
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06769999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.1175
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8095494255727620310, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634034213452076992, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8868477784766048876, guid: 6f276690d602f11478eb86be6b226528,
-        type: 3}
-      propertyPath: m_Name
-      value: OculusLogo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f276690d602f11478eb86be6b226528, type: 3}
 --- !u!1001 &8634034213235233856
 PrefabInstance:
   m_ObjectHideFlags: 0
