@@ -42,7 +42,8 @@ public class SpatialAnchorSession : AnchorSession
     }
 
     // Save callback
-    private void SpatialAnchorSaved(UInt64 requestId, UInt64 space, bool result, OVRPlugin.SpatialEntityUuid uuid)
+    private void SpatialAnchorSaved(UInt64 requestId, UInt64 space, 
+        bool result, OVRPlugin.SpatialEntityUuid uuid)
     {
         Log("SpatialAnchorSaved requestId: " + requestId + " space: " + space + " result: " + result + " uuid: " + GetUuidString(uuid));
 
