@@ -69,12 +69,19 @@ public class SpatialAnchorsPlacement : MonoBehaviour
         Logger.Instance.LogInfo("Button.SecondaryIndexTrigger: creating anchor");
         ulong anchorHandle = SpatialAnchorsManager.Instance.CreateSpatialAnchor(anchorTransform);
 
-        // create a new anchor on the current session
-        GameObject newAnchor = Instantiate(SpatialAnchorsManager.Instance.anchorPrefab);
-        SpatialAnchorsManager.Instance.resolvedAnchors.Add(anchorHandle, newAnchor);
+        if (anchorHandle != SpatialAnchorsManager.invalidAnchorHandle)
+        {
+            // create a new anchor on the current session
+            GameObject newAnchor = Instantiate(SpatialAnchorsManager.Instance.anchorPrefab);
+            SpatialAnchorsManager.Instance.resolvedAnchors.Add(anchorHandle, newAnchor);
 
-        // add it to a list so we can make them persistent
-        anchorsCreated.Add(anchorHandle);
+            // add it to a list so we can make them persistent
+            anchorsCreated.Add(anchorHandle);
+        }
+        else
+        {
+            Logger.Instance.LogError("Unable to create a new anchor");
+        }
     }
 
     private void SaveAllAnchors()
