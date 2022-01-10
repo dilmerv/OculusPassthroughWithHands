@@ -22,7 +22,7 @@ public class SpatialAnchorsPlacement : MonoBehaviour
 
     private Dictionary<ulong, GameObject> anchorsToBeSaved = new Dictionary<ulong, GameObject>();
 
-    private int resolvedAnchorCount = 0;
+    private int prevResolvedAnchorCount = 0;
 
     private void Awake()
     {
@@ -52,18 +52,19 @@ public class SpatialAnchorsPlacement : MonoBehaviour
         }
     }
 
-    private void ResolveAllAnchors()
-    {
-        SpatialAnchorsManager.Instance.QueryAllLocalAnchors();
-        EnableEraseFeatures();
-    }
+    private void ResolveAllAnchors() => SpatialAnchorsManager.Instance.QueryAllLocalAnchors();
 
     void Update()
     {
         if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {
-            saveAllAnchors.interactable = true;
             CreateAnchor();
+        }
+
+        if (prevResolvedAnchorCount != SpatialAnchorsManager.Instance.resolvedAnchors.Count)
+        {
+            prevResolvedAnchorCount = SpatialAnchorsManager.Instance.resolvedAnchors.Count;
+            AdditionalFeatures(prevResolvedAnchorCount > 0);
         }
     }
 
@@ -81,8 +82,6 @@ public class SpatialAnchorsPlacement : MonoBehaviour
 
             // add it to a list so we can make them persistent
             anchorsToBeSaved.Add(anchorHandle, newAnchor);
-
-            EnableEraseFeatures();
         }
         else
         {
@@ -90,10 +89,11 @@ public class SpatialAnchorsPlacement : MonoBehaviour
         }
     }
 
-    private void EnableEraseFeatures()
+    private void AdditionalFeatures(bool state = true)
     {
-        eraseAllAnchorsFromStorage.interactable = true;
-        eraseAllAnchorsFromMemory.interactable = true;
+        saveAllAnchors.interactable = state;
+        eraseAllAnchorsFromStorage.interactable = state;
+        eraseAllAnchorsFromMemory.interactable = state;
     }
 
     private void SaveAllAnchors()
