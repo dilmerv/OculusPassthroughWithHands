@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,21 +35,20 @@ public class SpatialAnchorsPlacement : MonoBehaviour
 
     private void DeleteAll(bool fromStorage = false)
     {
-        // deep copy of anchors
-        // needed to avoid dealing with decrements from original anchor reference
-        var anchors = new Dictionary<ulong, GameObject>(SpatialAnchorsManager.Instance.resolvedAnchors);
-        Logger.Instance.LogInfo($"DeleteAll(fromStorage:{fromStorage}) anchors found:{anchors.Keys.Count}");
+        var anchors = SpatialAnchorsManager.Instance.resolvedAnchors.Keys.ToList();
+
+        Logger.Instance.LogInfo($"DeleteAll(fromStorage:{fromStorage}) anchors found:{anchors.Count}");
 
         foreach (var anchor in anchors)
         {
-            Logger.Instance.LogInfo($"Attempting to delete anchor:{anchor.Key}");
+            Logger.Instance.LogInfo($"Attempting to delete anchor:{anchor}");
 
             if (fromStorage)
-                SpatialAnchorsManager.Instance.EraseAnchor(anchor.Key);
+                SpatialAnchorsManager.Instance.EraseAnchor(anchor);
             else
-                SpatialAnchorsManager.Instance.DestroyAnchor(anchor.Key);           
+                SpatialAnchorsManager.Instance.DestroyAnchor(anchor);           
 
-            Logger.Instance.LogInfo($"Finished deleting anchor: {anchor.Key}");
+            Logger.Instance.LogInfo($"Finished deleting anchor: {anchor}");
         }
     }
 
