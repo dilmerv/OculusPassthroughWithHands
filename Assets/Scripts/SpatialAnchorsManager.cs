@@ -1,6 +1,7 @@
 ﻿using DilmerGames.Core.Singletons;
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
@@ -61,11 +62,12 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 
     private void OVRManager_SpatialEntityQueryResults(ulong requestId, int numResults, OVRPlugin.SpatialEntityQueryResult[] results)
     {
+        Logger.Instance.LogInfo("SpatialEntityQueryResult requestId: " + requestId + " numResults " + numResults);
+
         for (int i = 0; i < numResults; i++)
         {
             var uuid = results[i].uuid;
             var space = results[i].space;
-            Logger.Instance.LogInfo("SpatialEntityQueryResult requestId: " + requestId + " space: " + space + " uuid: " + GetUuidString(uuid));
             TryEnableComponent(space, OVRPlugin.SpatialEntityComponentType.Storable);
             TryEnableComponent(space, OVRPlugin.SpatialEntityComponentType.Locatable);
         }
@@ -96,6 +98,8 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
     {
         // Create anchor gameobject
         GameObject anchorObject = Instantiate(anchorPrefab);
+
+        anchorObject.GetComponentInChildren<TextMeshProUGUI>().text = $"{anchorHandle}";
 
         // Add gameobject to dictionary so it can be tracked
         resolvedAnchors.Add(anchorHandle, anchorObject);
@@ -159,7 +163,6 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 
     public void SaveAnchor(ulong anchorHandle, StorageLocation location)
     {
-        Logger.Instance.LogInfo("SaveAnchor called on anchorHandle: " + anchorHandle);
         ulong saveRequest = 0;
         if (!OVRPlugin.SpatialEntitySaveSpatialEntity(ref anchorHandle, OVRPlugin.SpatialEntityStorageLocation.Local, OVRPlugin.SpatialEntityStoragePersistenceMode.IndefiniteHighPri, ref saveRequest))
         {
@@ -169,8 +172,6 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 
     public void DestroyAnchor(ulong anchorHandle)
     {
-        Logger.Instance.LogInfo("DestroyAnchor called on anchorHandle: " + anchorHandle);
-
         // Destroy anchor gameObject
         if (resolvedAnchors.ContainsKey(anchorHandle))
         {
@@ -188,8 +189,6 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 
     public void EraseAnchor(ulong anchorHandle)
     {
-        Logger.Instance.LogInfo("EraseAnchor called on anchorHandle: " + anchorHandle);
-
         // Destroy anchor gameObject
         if (resolvedAnchors.ContainsKey(anchorHandle))
         {

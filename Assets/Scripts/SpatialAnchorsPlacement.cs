@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,69 +15,74 @@ public class SpatialAnchorsPlacement : MonoBehaviour
     private Button eraseAllAnchorsFromMemory;
 
     [SerializeField]
+    private Button saveAllAnchors;
+
+    [SerializeField]
     private Button resolveAllAnchors;
 
-    private List<ulong> anchorsCreated = new List<ulong>();
+    private Dictionary<ulong, GameObject> anchorsToBeSaved = new Dictionary<ulong, GameObject>();
+
+    private int resolvedAnchorCount = 0;
 
     private void Awake()
     {
-        eraseAllAnchorsFromMemory.interactable = false;
-        eraseAllAnchorsFromMemory.onClick.AddListener(() =>
-        {
-            Logger.Instance.LogInfo("UI eraseAllAnchorsFromMemory executed");
-            DeleteAll();
-        });
-
-        eraseAllAnchorsFromStorage.interactable = false;
-        eraseAllAnchorsFromStorage.onClick.AddListener(() =>
-        {
-            Logger.Instance.LogInfo("UI eraseAllAnchorsFromStorage executed");
-            DeleteAll(true);
-        });
-
-        resolveAllAnchors.onClick.AddListener(() =>
-        {
-            Logger.Instance.LogInfo("UI resolveAllAnchors executed");
-            ResolveAllAnchors();
-            eraseAllAnchorsFromStorage.interactable = true;
-            eraseAllAnchorsFromMemory.interactable = true;
-        });
+        eraseAllAnchorsFromMemory.onClick.AddListener(() => DeleteAll());
+        eraseAllAnchorsFromStorage.onClick.AddListener(() => DeleteAll(true));
+        resolveAllAnchors.onClick.AddListener(() => ResolveAllAnchors());
+        saveAllAnchors.onClick.AddListener(() => SaveAllAnchors());
     }
 
-    private static void DeleteAll(bool fromStorage = false)
+    private void DeleteAll(bool fromStorage = false)
     {
-        var anchors = SpatialAnchorsManager.Instance.resolvedAnchors;
+        // deep copy of anchors
+        // needed to avoid dealing with decrements from original anchor reference
+        var anchors = new Dictionary<ulong, GameObject>(SpatialAnchorsManager.Instance.resolvedAnchors);
+        Logger.Instance.LogInfo($"DeleteAll(fromStorage:{fromStorage}) anchors found:{anchors.Keys.Count}");
+
         foreach (var anchor in anchors)
         {
-            if(fromStorage)
+            Logger.Instance.LogInfo($"Attempting to delete anchor:{anchor.Key}");
+
+            if (fromStorage)
                 SpatialAnchorsManager.Instance.EraseAnchor(anchor.Key);
             else
-                SpatialAnchorsManager.Instance.DestroyAnchor(anchor.Key);
+                SpatialAnchorsManager.Instance.DestroyAnchor(anchor.Key);           
+
+            Logger.Instance.LogInfo($"Finished deleting anchor: {anchor.Key}");
         }
     }
 
-    private void ResolveAllAnchors() => SpatialAnchorsManager.Instance.QueryAllLocalAnchors();
+    private void ResolveAllAnchors()
+    {
+        SpatialAnchorsManager.Instance.QueryAllLocalAnchors();
+        EnableEraseFeatures();
+    }
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) CreateAnchor();
-        if (OVRInput.GetDown(OVRInput.Button.One))                   SaveAllAnchors();
-        if (OVRInput.GetDown(OVRInput.Button.Two))                   ResolveAllAnchors();
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+        {
+            saveAllAnchors.interactable = true;
+            CreateAnchor();
+        }
     }
 
     private void CreateAnchor()
     {
-        Logger.Instance.LogInfo("Button.SecondaryIndexTrigger: creating anchor");
         ulong anchorHandle = SpatialAnchorsManager.Instance.CreateSpatialAnchor(anchorTransform);
 
         if (anchorHandle != SpatialAnchorsManager.invalidAnchorHandle)
         {
             // create a new anchor on the current session
             GameObject newAnchor = Instantiate(SpatialAnchorsManager.Instance.anchorPrefab);
+            newAnchor.GetComponentInChildren<TextMeshProUGUI>().text = $"{anchorHandle}";
+
             SpatialAnchorsManager.Instance.resolvedAnchors.Add(anchorHandle, newAnchor);
 
             // add it to a list so we can make them persistent
-            anchorsCreated.Add(anchorHandle);
+            anchorsToBeSaved.Add(anchorHandle, newAnchor);
+
+            EnableEraseFeatures();
         }
         else
         {
@@ -84,12 +90,17 @@ public class SpatialAnchorsPlacement : MonoBehaviour
         }
     }
 
+    private void EnableEraseFeatures()
+    {
+        eraseAllAnchorsFromStorage.interactable = true;
+        eraseAllAnchorsFromMemory.interactable = true;
+    }
+
     private void SaveAllAnchors()
     {
-        Logger.Instance.LogInfo("Button.One: saving anchors");
-        foreach (var handle in anchorsCreated)
+        foreach (var handle in anchorsToBeSaved)
         {
-            SpatialAnchorsManager.Instance.SaveAnchor(handle, SpatialAnchorsManager.StorageLocation.LOCAL);
+            SpatialAnchorsManager.Instance.SaveAnchor(handle.Key, SpatialAnchorsManager.StorageLocation.LOCAL);
         }
     }
 }
