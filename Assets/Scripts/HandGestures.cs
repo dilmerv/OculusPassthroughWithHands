@@ -21,6 +21,7 @@ public class HandGestures : MonoBehaviour
     }
     void Update()
     {
+        // index finger pinch creates an anchor
         if(ovrHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
         {
             Logger.Instance.LogInfo($"Hand ({HandType}) Pinch Strength ({ovrHand.GetFingerPinchStrength(OVRHand.HandFinger.Index)})");
