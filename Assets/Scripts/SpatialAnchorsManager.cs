@@ -42,27 +42,16 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         OVRManager.SpatialEntitySetComponentEnabled -= OVRManager_SpatialEntitySetComponentEnabled;
     }
 
-
     #region CallBacks
 
-    private void OVRManager_SpatialEntityStorageSave(ulong requestId, ulong space,
-      bool result, OVRPlugin.SpatialEntityUuid uuid)
+    private void OVRManager_SpatialEntityStorageSave(ulong requestId, ulong space, bool result, OVRPlugin.SpatialEntityUuid uuid)
     {
-        Logger.Instance.LogInfo("SpatialAnchorSaved requestId: " + requestId + " space: " + space + " result: " + result + " uuid: " + GetUuidString(uuid));
-
-        // Write uuid of saved anchor to file
-        if (!PlayerPrefs.HasKey(numUuids))
-        {
-            PlayerPrefs.SetInt(numUuids, 0);
-        }
-        int playerNumUuids = PlayerPrefs.GetInt(numUuids);
-        PlayerPrefs.SetString("uuid" + playerNumUuids, GetUuidString(uuid));
-        PlayerPrefs.SetInt(numUuids, ++playerNumUuids);
+        Logger.Instance.LogInfo($"SpatialAnchorSaved requestId: {requestId} space: {space} result: {result} uuid: {GetUuidString(uuid)}");
     }
 
     private void OVRManager_SpatialEntityQueryResults(ulong requestId, int numResults, OVRPlugin.SpatialEntityQueryResult[] results)
     {
-        Logger.Instance.LogInfo("SpatialEntityQueryResult requestId: " + requestId + " numResults " + numResults);
+        Logger.Instance.LogInfo($"SpatialEntityQueryResult requestId: {requestId} numResults: {numResults}");
 
         for (int i = 0; i < numResults; i++)
         {
@@ -75,13 +64,13 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 
     private void OVRManager_SpatialEntityQueryComplete(ulong requestId, bool result, int numFound)
     {
-        Logger.Instance.LogInfo("SpatialEntityQueryComplete requestId: " + requestId + " result: " + result + " numFound: " + numFound);
+        Logger.Instance.LogInfo($"SpatialEntityQueryComplete requestId: {requestId} result: {result} numFound: {numFound}");
     }
 
     private void OVRManager_SpatialEntityStorageErase(ulong requestId, bool result,
         OVRPlugin.SpatialEntityUuid uuid, OVRPlugin.SpatialEntityStorageLocation location)
     {
-        Logger.Instance.LogInfo("SpatialEntityStorageErase requestID: " + requestId + " result: " + result + " uuid: " + GetUuidString(uuid) + " location: " + location);
+        Logger.Instance.LogInfo($"SpatialEntityStorageErase requestId: {requestId} result: {result} uuid: {GetUuidString(uuid)} location: {location}");
     }
 
     private void OVRManager_SpatialEntitySetComponentEnabled(ulong requestId, bool result,
@@ -128,11 +117,11 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         ulong anchorHandle = AnchorSession.kInvalidHandle;
         if (OVRPlugin.SpatialEntityCreateSpatialAnchor(createInfo, ref anchorHandle))
         {
-            Logger.Instance.LogInfo("Spatial anchor created with handle: " + anchorHandle);
+            Logger.Instance.LogInfo($"Spatial anchor created with handle: {anchorHandle}");
         }
         else
         {
-            Logger.Instance.LogError("OVRPlugin.SpatialEntityCreateSpatialAnchor failed");
+            Logger.Instance.LogError("SpatialEntityCreateSpatialAnchor failed");
         }
 
         TryEnableComponent(anchorHandle, OVRPlugin.SpatialEntityComponentType.Locatable);
@@ -157,7 +146,7 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         ulong newReqId = 0;
         if (!OVRPlugin.SpatialEntityQuerySpatialEntity(queryInfo, ref newReqId))
         {
-            Logger.Instance.LogInfo("OVRPlugin.SpatialEntityQuerySpatialEntity initiated");
+            Logger.Instance.LogInfo("SpatialEntityQuerySpatialEntity failed");
         }
     }
 
@@ -166,7 +155,7 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         ulong saveRequest = 0;
         if (!OVRPlugin.SpatialEntitySaveSpatialEntity(ref anchorHandle, OVRPlugin.SpatialEntityStorageLocation.Local, OVRPlugin.SpatialEntityStoragePersistenceMode.IndefiniteHighPri, ref saveRequest))
         {
-            Logger.Instance.LogInfo("OVRPlugin.SpatialEntitySaveSpatialEntity initiated for anchorHandle " + anchorHandle + " location " + location);
+            Logger.Instance.LogInfo($"SpatialEntitySaveSpatialEntity failed for anchorHandle: {anchorHandle} location: {location}");
         }
     }
 
@@ -183,7 +172,7 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         // Destroy anchor in memory
         if (!OVRPlugin.DestroySpace(ref anchorHandle))
         {
-            Logger.Instance.LogError("OVRPlugin.DestroySpace failed for anchorHandle " + anchorHandle);
+            Logger.Instance.LogError($"DestroySpace failed for anchorHandle: {anchorHandle}");
         }
     }
 
@@ -200,15 +189,13 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         ulong eraseRequest = 0;
         if (!OVRPlugin.SpatialEntityEraseSpatialEntity(ref anchorHandle, OVRPlugin.SpatialEntityStorageLocation.Local, ref eraseRequest))
         {
-            Logger.Instance.LogError("OVRPlugin.SpatialEntityEraseSpatialEntity initiated for anchorHandle " + anchorHandle);
+            Logger.Instance.LogError($"SpatialEntityEraseSpatialEntity failed for anchorHandle: {anchorHandle}");
         }
     }
 
     private void TryEnableComponent(ulong anchorHandle, OVRPlugin.SpatialEntityComponentType type)
     {
-        bool enabled;
-        bool changePending;
-        bool success = OVRPlugin.SpatialEntityGetComponentEnabled(ref anchorHandle, type, out enabled, out changePending);
+        bool success = OVRPlugin.SpatialEntityGetComponentEnabled(ref anchorHandle, type, out bool enabled, out bool _);
         if (!success)
         {
             Logger.Instance.LogError("SpatialEntityGetComponentEnabled did not complete successfully");
@@ -216,13 +203,13 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 
         if (enabled)
         {
-            Logger.Instance.LogWarning("Component of type: " + type + " already enabled for anchorHandle: " + anchorHandle);
+            Logger.Instance.LogWarning($"Anchor component of type: {type} already enabled for anchorHandle: {anchorHandle}");
         }
         else
         {
             ulong requestId = 0;
             OVRPlugin.SpatialEntitySetComponentEnabled(ref anchorHandle, type, true, 0, ref requestId);
-            Logger.Instance.LogInfo("Enabling component for anchorHandle: " + anchorHandle + " type: " + type + " requestId " + requestId);
+            Logger.Instance.LogInfo($"Enabling component for anchorHandle: {anchorHandle} type: {type} requestId: {requestId}");
             switch (type)
             {
                 case OVRPlugin.SpatialEntityComponentType.Locatable:
