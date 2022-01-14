@@ -52,13 +52,10 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
     private void OVRManager_SpatialEntityQueryResults(ulong requestId, int numResults, OVRPlugin.SpatialEntityQueryResult[] results)
     {
         Logger.Instance.LogInfo($"SpatialEntityQueryResult requestId: {requestId} numResults: {numResults}");
-
-        for (int i = 0; i < numResults; i++)
+        foreach(var spatialQueryResult in results)
         {
-            var uuid = results[i].uuid;
-            var space = results[i].space;
-            TryEnableComponent(space, OVRPlugin.SpatialEntityComponentType.Storable);
-            TryEnableComponent(space, OVRPlugin.SpatialEntityComponentType.Locatable);
+            TryEnableComponent(spatialQueryResult.space, OVRPlugin.SpatialEntityComponentType.Storable);
+            TryEnableComponent(spatialQueryResult.space, OVRPlugin.SpatialEntityComponentType.Locatable);
         }
     }
 
