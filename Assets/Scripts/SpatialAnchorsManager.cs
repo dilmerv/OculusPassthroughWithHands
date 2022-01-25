@@ -1,13 +1,14 @@
 ﻿using DilmerGames.Core.Singletons;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 {
     [SerializeField]
-    public GameObject anchorPrefab;
+    public GameObject[] anchorPrefabs;
 
     public const ulong invalidAnchorHandle = ulong.MaxValue;
 
@@ -16,7 +17,13 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         LOCAL = 0
     }
 
-    public Dictionary<ulong, ulong> locateAnchorRequest = new Dictionary<ulong, ulong>();
+    public class AnchorInfo
+    { 
+        public ulong AnchorHandle { get; set; }
+        public string UuId { get; set; }
+    }
+
+    public Dictionary<ulong, AnchorInfo> locateAnchorRequest = new Dictionary<ulong, AnchorInfo>();
 
     public Dictionary<ulong, GameObject> resolvedAnchors = new Dictionary<ulong, GameObject>();
 
@@ -46,7 +53,17 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 
     private void OVRManager_SpatialEntityStorageSave(ulong requestId, ulong space, bool result, OVRPlugin.SpatialEntityUuid uuid)
     {
-        Logger.Instance.LogInfo($"SpatialAnchorSaved requestId: {requestId} space: {space} result: {result} uuid: {GetUuidString(uuid)}");
+        if (space > 0 && space != invalidAnchorHandle)
+        {
+            string anchorHandleKey = $"{space}";
+            Logger.Instance.LogInfo($"SpatialAnchorSaved requestId: {requestId} space: {space} result: {result} uuid: {anchorHandleKey}");
+
+            GameObject savedPrefab = resolvedAnchors[space];
+
+            PlayerPrefs.SetString(GetUuidString(uuid), savedPrefab.name);
+            Logger.Instance.LogInfo($"SpatialAnchorSaved PlayerPrefs set anchorHandle key: {anchorHandleKey} & associated prefabName: {savedPrefab.name}");
+            PlayerPrefs.Save();
+        }
     }
 
     private void OVRManager_SpatialEntityQueryResults(ulong requestId, int numResults, OVRPlugin.SpatialEntityQueryResult[] results)
@@ -54,8 +71,8 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         Logger.Instance.LogInfo($"SpatialEntityQueryResult requestId: {requestId} numResults: {numResults}");
         foreach(var spatialQueryResult in results)
         {
-            TryEnableComponent(spatialQueryResult.space, OVRPlugin.SpatialEntityComponentType.Storable);
-            TryEnableComponent(spatialQueryResult.space, OVRPlugin.SpatialEntityComponentType.Locatable);
+            TryEnableComponent(spatialQueryResult.space, spatialQueryResult.uuid, OVRPlugin.SpatialEntityComponentType.Storable);
+            TryEnableComponent(spatialQueryResult.space, spatialQueryResult.uuid, OVRPlugin.SpatialEntityComponentType.Locatable);
         }
     }
 
@@ -74,21 +91,32 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         OVRPlugin.SpatialEntityComponentType componentType, ulong space)
     {
         if (locateAnchorRequest.ContainsKey(requestId) &&
-            !resolvedAnchors.ContainsKey(locateAnchorRequest[requestId]))
+            !resolvedAnchors.ContainsKey(locateAnchorRequest[requestId].AnchorHandle))
         {
             CreateAnchorGameObject(locateAnchorRequest[requestId]);
         }
     }
 
-    private void CreateAnchorGameObject(ulong anchorHandle)
+    private void CreateAnchorGameObject(AnchorInfo anchorInfo)
     {
-        // Create anchor gameobject
-        GameObject anchorObject = Instantiate(anchorPrefab);
+        GameObject savedPrefab = null;
 
-        anchorObject.GetComponentInChildren<TextMeshProUGUI>().text = $"{anchorHandle}";
+        if (PlayerPrefs.HasKey($"{anchorInfo.UuId}")) {
+            string savedPrefabName = PlayerPrefs.GetString($"{anchorInfo.UuId}");
+            savedPrefab = anchorPrefabs.FirstOrDefault(a => a.name == savedPrefabName);
+        }
+        else
+        {
+            savedPrefab = anchorPrefabs.First();
+        }
+        
+        // Create anchor gameobject
+        GameObject anchorObject = Instantiate(savedPrefab);
+
+        anchorObject.GetComponentInChildren<TextMeshProUGUI>().text = $"{anchorInfo.UuId}";
 
         // Add gameobject to dictionary so it can be tracked
-        resolvedAnchors.Add(anchorHandle, anchorObject);
+        resolvedAnchors.Add(anchorInfo.AnchorHandle, anchorObject);
     }
 
     private string GetUuidString(OVRPlugin.SpatialEntityUuid uuid)
@@ -188,9 +216,13 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         {
             Logger.Instance.LogError($"SpatialEntityEraseSpatialEntity failed for anchorHandle: {anchorHandle}");
         }
+        else
+        {
+            PlayerPrefs.DeleteKey($"{anchorHandle}");
+        }
     }
 
-    private void TryEnableComponent(ulong anchorHandle, OVRPlugin.SpatialEntityComponentType type)
+    private void TryEnableComponent(ulong anchorHandle, OVRPlugin.SpatialEntityUuid uuid, OVRPlugin.SpatialEntityComponentType type)
     {
         bool success = OVRPlugin.SpatialEntityGetComponentEnabled(ref anchorHandle, type, out bool enabled, out bool _);
         if (!success)
@@ -205,18 +237,20 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         else
         {
             ulong requestId = 0;
-            OVRPlugin.SpatialEntitySetComponentEnabled(ref anchorHandle, type, true, 0, ref requestId);
-            Logger.Instance.LogInfo($"Enabling component for anchorHandle: {anchorHandle} type: {type} requestId: {requestId}");
-            switch (type)
+            if (OVRPlugin.SpatialEntitySetComponentEnabled(ref anchorHandle, type, true, 0, ref requestId))
             {
-                case OVRPlugin.SpatialEntityComponentType.Locatable:
-                    locateAnchorRequest.Add(requestId, anchorHandle);
-                    break;
-                case OVRPlugin.SpatialEntityComponentType.Storable:
-                    break;
-                default:
-                    Logger.Instance.LogError("Tried to enable component that's not supported");
-                    break;
+                Logger.Instance.LogInfo($"Enabling component for anchorHandle: {anchorHandle} type: {type} requestId: {requestId}");
+                switch (type)
+                {
+                    case OVRPlugin.SpatialEntityComponentType.Locatable:
+                        locateAnchorRequest.Add(requestId, new AnchorInfo { AnchorHandle = anchorHandle, UuId = $"{GetUuidString(uuid)}" });
+                        break;
+                    case OVRPlugin.SpatialEntityComponentType.Storable:
+                        break;
+                    default:
+                        Logger.Instance.LogError("Tried to enable component that's not supported");
+                        break;
+                }
             }
         }
     }

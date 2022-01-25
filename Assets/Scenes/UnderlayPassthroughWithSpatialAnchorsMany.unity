@@ -152,6 +152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorPrefabs:
   - {fileID: 8868477784766048876, guid: aa82b62fcf1530f47b6e1180ee772455, type: 3}
+  - {fileID: 8868477784766048876, guid: 1175b2667dfb87147847a579b0b15a55, type: 3}
+  - {fileID: 8868477784766048876, guid: 559a488c9c4a71045963c65dd056db3d, type: 3}
+  - {fileID: 8868477784766048876, guid: fd9ed8f90e4b70d4e96ec966aa616def, type: 3}
 --- !u!4 &300249967
 Transform:
   m_ObjectHideFlags: 0

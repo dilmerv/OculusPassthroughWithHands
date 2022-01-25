@@ -50,6 +50,9 @@ public class SpatialAnchorsPlacement : MonoBehaviour
 
             Logger.Instance.LogInfo($"Finished deleting anchor: {anchor}");
         }
+
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 
     private void ResolveAllAnchors() => SpatialAnchorsManager.Instance.QueryAllLocalAnchors();
@@ -74,14 +77,20 @@ public class SpatialAnchorsPlacement : MonoBehaviour
 
         if (anchorHandle != SpatialAnchorsManager.invalidAnchorHandle)
         {
+            var prefabs = SpatialAnchorsManager.Instance.anchorPrefabs;
+            var randomPrefab = prefabs[Random.Range(0, prefabs.Length)];
             // create a new anchor on the current session
-            GameObject newAnchor = Instantiate(SpatialAnchorsManager.Instance.anchorPrefab);
+            GameObject newAnchor = Instantiate(randomPrefab);
+            newAnchor.name = randomPrefab.name;
+
             newAnchor.GetComponentInChildren<TextMeshProUGUI>().text = $"{anchorHandle}";
 
             SpatialAnchorsManager.Instance.resolvedAnchors.Add(anchorHandle, newAnchor);
 
             // add it to a list so we can make them persistent
             anchorsToBeSaved.Add(anchorHandle, newAnchor);
+
+            Logger.Instance.LogInfo($"CreateAnchor: {anchorHandle}");
         }
         else
         {
