@@ -5,7 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
+public partial class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
 {
     [SerializeField]
     public GameObject[] anchorPrefabs;
@@ -17,17 +17,9 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         LOCAL = 0
     }
 
-    public class AnchorInfo
-    { 
-        public ulong AnchorHandle { get; set; }
-        public string UuId { get; set; }
-    }
-
-    public Dictionary<ulong, AnchorInfo> locateAnchorRequest = new Dictionary<ulong, AnchorInfo>();
+    public Dictionary<ulong, SpatialAnchorInfo> locateAnchorRequest = new Dictionary<ulong, SpatialAnchorInfo>();
 
     public Dictionary<ulong, GameObject> resolvedAnchors = new Dictionary<ulong, GameObject>();
-
-    private const string numUuids = "numUuids";
 
     void Start()
     {
@@ -55,13 +47,16 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
     {
         if (space > 0 && space != invalidAnchorHandle)
         {
-            string anchorHandleKey = $"{space}";
-            Logger.Instance.LogInfo($"SpatialAnchorSaved requestId: {requestId} space: {space} result: {result} uuid: {anchorHandleKey}");
+            string uuId = GetUuidString(uuid);
+            Logger.Instance.LogInfo($"SpatialAnchorSaved requestId: {requestId} space: {space} result: {result} uuid: {uuId}");
+
+            // uuid is not generated until save callback executes
+            locateAnchorRequest[requestId].UuId = uuId;
 
             GameObject savedPrefab = resolvedAnchors[space];
 
-            PlayerPrefs.SetString(GetUuidString(uuid), savedPrefab.name);
-            Logger.Instance.LogInfo($"SpatialAnchorSaved PlayerPrefs set anchorHandle key: {anchorHandleKey} & associated prefabName: {savedPrefab.name}");
+            PlayerPrefs.SetString(uuId, savedPrefab.name);
+            Logger.Instance.LogInfo($"SpatialAnchorSaved PlayerPrefs set uuId key: {uuId} & associated prefabName: {savedPrefab.name}");
             PlayerPrefs.Save();
         }
     }
@@ -85,6 +80,12 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         OVRPlugin.SpatialEntityUuid uuid, OVRPlugin.SpatialEntityStorageLocation location)
     {
         Logger.Instance.LogInfo($"SpatialEntityStorageErase requestId: {requestId} result: {result} uuid: {GetUuidString(uuid)} location: {location}");
+        string uuId = GetUuidString(uuid);
+        
+        if (PlayerPrefs.HasKey(uuId))
+        {
+            PlayerPrefs.DeleteKey(uuId);
+        }
     }
 
     private void OVRManager_SpatialEntitySetComponentEnabled(ulong requestId, bool result,
@@ -97,12 +98,13 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         }
     }
 
-    private void CreateAnchorGameObject(AnchorInfo anchorInfo)
+    private void CreateAnchorGameObject(SpatialAnchorInfo anchorInfo)
     {
         GameObject savedPrefab = null;
+        string uuId = $"{anchorInfo.UuId}";
 
-        if (PlayerPrefs.HasKey($"{anchorInfo.UuId}")) {
-            string savedPrefabName = PlayerPrefs.GetString($"{anchorInfo.UuId}");
+        if (PlayerPrefs.HasKey(uuId)) {
+            string savedPrefabName = PlayerPrefs.GetString(uuId);
             savedPrefab = anchorPrefabs.FirstOrDefault(a => a.name == savedPrefabName);
         }
         else
@@ -113,7 +115,7 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         // Create anchor gameobject
         GameObject anchorObject = Instantiate(savedPrefab);
 
-        anchorObject.GetComponentInChildren<TextMeshProUGUI>().text = $"{anchorInfo.UuId}";
+        anchorObject.GetComponentInChildren<TextMeshProUGUI>().text = uuId;
 
         // Add gameobject to dictionary so it can be tracked
         resolvedAnchors.Add(anchorInfo.AnchorHandle, anchorObject);
@@ -149,8 +151,8 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
             Logger.Instance.LogError("SpatialEntityCreateSpatialAnchor failed");
         }
 
-        TryEnableComponent(anchorHandle, OVRPlugin.SpatialEntityComponentType.Locatable);
-        TryEnableComponent(anchorHandle, OVRPlugin.SpatialEntityComponentType.Storable);
+        TryEnableComponent(anchorHandle, new OVRPlugin.SpatialEntityUuid(), OVRPlugin.SpatialEntityComponentType.Locatable);
+        TryEnableComponent(anchorHandle, new OVRPlugin.SpatialEntityUuid(), OVRPlugin.SpatialEntityComponentType.Storable);
 
         return anchorHandle;
     }
@@ -216,10 +218,6 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
         {
             Logger.Instance.LogError($"SpatialEntityEraseSpatialEntity failed for anchorHandle: {anchorHandle}");
         }
-        else
-        {
-            PlayerPrefs.DeleteKey($"{anchorHandle}");
-        }
     }
 
     private void TryEnableComponent(ulong anchorHandle, OVRPlugin.SpatialEntityUuid uuid, OVRPlugin.SpatialEntityComponentType type)
@@ -243,7 +241,7 @@ public class SpatialAnchorsManager : Singleton<SpatialAnchorsManager>
                 switch (type)
                 {
                     case OVRPlugin.SpatialEntityComponentType.Locatable:
-                        locateAnchorRequest.Add(requestId, new AnchorInfo { AnchorHandle = anchorHandle, UuId = $"{GetUuidString(uuid)}" });
+                        locateAnchorRequest.Add(requestId, new SpatialAnchorInfo { AnchorHandle = anchorHandle, UuId = GetUuidString(uuid) });
                         break;
                     case OVRPlugin.SpatialEntityComponentType.Storable:
                         break;

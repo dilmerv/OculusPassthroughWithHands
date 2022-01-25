@@ -50,9 +50,6 @@ public class SpatialAnchorsPlacement : MonoBehaviour
 
             Logger.Instance.LogInfo($"Finished deleting anchor: {anchor}");
         }
-
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
     }
 
     private void ResolveAllAnchors() => SpatialAnchorsManager.Instance.QueryAllLocalAnchors();
